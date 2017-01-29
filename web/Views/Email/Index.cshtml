@@ -1,0 +1,48 @@
+﻿<h2>Index</h2>
+<div class="container">
+    <form ng-submit="send()">
+        <div class="alert alert-success" ng-if="success">{{success}} </div>
+        <div class="alert alert-danger" ng-if="error">{{error}} </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <input id="email" type="email" ng-model="email" class="form-control" name="email" placeholder="Add recipient" />
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary" type="button" ng-click="add()">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                    <input id="message.name" type="text" ng-model="message.name" class="form-control" required name="message_name" placeholder="subject" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <textarea id="message.content" type="text" placeholder="Message" ng-model="message.content" class="form-control" required name="mmessage_content"></textarea>
+            </div>
+            <div class="input-group">
+                <button type="submit" class="btn btn-success ">Enviar</button>
+            </div>
+        </div>
+        <div class="col-sm-6" >
+            
+            <table class="table table-striped" ng-if="message.recipients.length">
+                <tr ng-repeat="recipient in message.recipients">
+                    <td>
+                        {{recipient.email}}-{{recipient.name}}
+                    </td>
+                    <td>
+                        <i class="glyphicon glyphicon-trash small danger" ng-click="remove($index)"></i>
+                    </td>
+                </tr>
+            </table>
+
+            
+        </div>
+    </form>
+</div>
+

@@ -1,0 +1,35 @@
+﻿<!--
+
+Attributes
+
+ng-model: required
+disabled: (model) default false (If you want to disable file selection for example if you want to add an Delete buttom inside the image area)
+name: default 'userFile'
+uri: default '/upload/upload'
+multiple: default 'true'
+accept: default empty (Accept comma-separated list of MIME Types)
+credentials: default 'false' (Share your credentials between your browser and the API)
+preview: default 'false' (Process a base64 preview of the selected image)
+file-selector: default 'false' (By default the whole area is clickable but you may want to select the file targeting some other element inside the directive, uses css selector such as "span.file-buttom")
+resize: default 'false' (Must be used with max-width and max-height)
+max-width: default 'false' (Must be used with resize and max-height)
+max-height: default 'false' (Must be used with resize and max-width)
+-->
+<h3>Exemplo 1</h3>
+<div class="container">
+    <file-upload class="btn btn-success btn-rad btn-trans file-upload" name="userFile" resize="true" max-width="1280" max-height="1280" ng-model="inputFile" multiple="true" uri="{{urlAction}}">
+        <i class="fa fa-upload"></i>
+        <span>Upload Files</span>
+        <ul>
+            <li ng-repeat="p in inputFile" ng-hide="p.percent == 100">
+                <small>{{ p.name }}</small>
+                <div class="progress">
+                    <div class="progress-bar" style="width: {{ p.percent }}%;"></div>
+                </div>
+            </li>
+        </ul>
+    </file-upload>
+</div>
+
+
+

@@ -1,0 +1,25 @@
+﻿<form class="form-group" name="fomrUpload" method="post" enctype="multipart/form-data">
+    <label class="col-sm-2 control-label">{{label}}</label>
+    <div class="col-sm-8">
+        <div class="fileinput fileinput-new" data-provides="fileinput">
+            <input type="hidden">
+            <div class="input-group">
+                <div class="form-control" data-trigger="fileinput">
+                    <i class="fa fa-file fileinput-exists"></i>&nbsp;<span class="fileinput-filename"></span>
+                </div>
+                <span class="input-group-btn">
+                    <!--<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>-->
+                    <span class="btn btn-default btn-file">
+                        <span class="fileinput-new">{{selectText}}</span>
+                        <input type="file" style="display:block;position:absolute;top:0;right:0;opacity:0;transform:translate(-300px,0) scale(4)">
+                    </span>
+
+                </span>
+            </div>
+            
+        </div>
+    </div>
+    <div ng-repeat="file in files track by $index">
+        <pre>{{fileInfo | json}}</pre>
+    </div>
+</form>

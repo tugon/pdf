@@ -1,0 +1,32 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+
+.btn-file {
+     overflow: hidden;
+     position: relative;
+     vertical-align: middle;
+}
+
+.btn-file > input {
+     position: absolute;
+     top: 0;
+     right: 0;
+     margin: 0;
+     opacity: 0;
+     filter: alpha(opacity=0);
+     transform: translate(-300px, 0) scale(4);
+     font-size: 23px;
+     direction: ltr;
+     cursor: pointer;
+}

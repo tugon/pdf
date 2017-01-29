@@ -1,0 +1,37 @@
+﻿.container .section .title {
+    color: cadetblue;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.container .welcome div {
+    padding-bottom: 20px;
+}
+
+.container .section .text {
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.container .section {
+    padding-bottom: 20px;
+}
+
+ul {
+    list-style-type:circle;
+    list-style-position:unset;
+}
+
+
+div {
+    font-family: Calibri,verdana;
+    font-size: 14pt;
+}
+
+.container .code {
+    font-weight: bold;
+}
+
+.container {
+    page-break-after: always;
+}
